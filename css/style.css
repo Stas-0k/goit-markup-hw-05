@@ -14,6 +14,7 @@
   --background-button: #f5f4fa;
   --social-color: #AFB1B8;
   --footer-icon: rgba(255, 255, 255, 0.1);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -24,6 +25,10 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -91,6 +96,7 @@ a {
 }
 
 
+
 /*менюшка*/
 
 .site-nav {
@@ -111,6 +117,7 @@ a {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition);
 }
 
 .site-nav .link:hover,
@@ -133,6 +140,7 @@ a {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition);
 }
 
 .auth .link:hover,
@@ -377,6 +385,11 @@ color: var(--primary-white-color);
   margin-right: 10px;
 }
 
+.soc-link {
+  transition: background-color var(--transition);
+}
+
+
 .soc-link:hover,
 .soc-link:focus {
   background-color: var(--accent-color);
@@ -463,6 +476,7 @@ color: var(--primary-white-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  transition: color var(--transition), background-color var(--transition), box-shadow var(--transition) ;
 }
 
 .portfolio-button:hover,
@@ -474,6 +488,7 @@ color: var(--primary-white-color);
 
 .portfolio-hover {
   display: block;
+  transition: box-shadow var(--transition);
 }
 
 .portfolio-hover:hover,
@@ -581,6 +596,7 @@ color: var(--primary-white-color);
   border-radius: 4px;
 
   fill: var(--social-color);
+  transition: border-color var(--transition);
 }
 
 .fifth .item:not(:last-child) {
@@ -634,6 +650,8 @@ color: var(--primary-white-color);
   justify-content: center;
   background-color: var(--footer-icon);
   border-radius: 50%;
+
+  transition: background-color var(--transition);
 }
 
 .footer-social {
