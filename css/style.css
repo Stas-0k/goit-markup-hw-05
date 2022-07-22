@@ -565,17 +565,17 @@ color: var(--primary-white-color);
   justify-content: center;
 }
 
-.portf-item {
+.portfolio-hover {
   transition: box-shadow var(--transition);
 }
 
-.portf-item:hover,
-.portf-item:focus {
+.portfolio-hover:hover,
+.portfolio-hover:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portf-item:hover .overlay-text,
-.portf-item:focus .overlay-text {
+.portfolio-hover:hover .overlay-text,
+.portfolio-hover:focus .overlay-text {
   transform: translateY(0);
 }
 
