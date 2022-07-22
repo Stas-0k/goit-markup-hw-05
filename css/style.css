@@ -429,7 +429,8 @@ color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
-.soc-link:hover .icon-social {
+.soc-link:hover .icon-social,
+.soc-link:focus .icon-social {
   fill: #fff;
 }
 
@@ -534,9 +535,48 @@ color: var(--primary-white-color);
   transition: box-shadow var(--transition);
 }
 
-.portfolio-hover:hover,
- .portfolio-hover:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)
+.portf-cont {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  padding: 63px 24px;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform var(--transition);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portf-item {
+  transition: box-shadow var(--transition);
+}
+
+.portf-item:hover,
+.portf-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portf-item:hover .overlay-text,
+.portf-item:focus .overlay-text {
+  transform: translateY(0);
 }
 
 
@@ -659,13 +699,15 @@ color: var(--primary-white-color);
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);
+ 
 }
 
 .clients-icon {
   transition: fill var(--transition);
 }
 
-.clients-link:hover .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--accent-color);
 }
 
@@ -703,7 +745,7 @@ color: var(--primary-white-color);
   background-color: var(--footer-icon);
   border-radius: 50%;
 
-  transition: background-color var(--transition);
+  
 }
 
 .footer-social {
@@ -712,6 +754,9 @@ color: var(--primary-white-color);
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+
+  transition: background-color var(--transition);
 
 }
 
@@ -719,8 +764,9 @@ color: var(--primary-white-color);
   margin-right: 10px;
 }
 
-.footer-list .item:hover,
-.footer-list .item:focus {
+
+.footer-social:hover,
+.footer-social:focus {
   background-color: var(--accent-color);
 }
 
@@ -784,51 +830,4 @@ color: var(--primary-white-color);
   cursor: pointer;
 }
 
-.portf-cont {
-  position: relative;
-  overflow: hidden;
-}
-
-
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  padding: 63px 24px;
-  height: 100%;
-
-  transform: translateY(100%);
-  transition: transform var(--transition);
-  
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-
-
-}
-
-.portf-item {
-  transition: box-shadow var(--transition);
-}
-
-.portf-item:hover,
-.portf-item:focus
-{ 
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portf-item:hover .overlay-text {
-  transform: translateY(0);
-}
 
